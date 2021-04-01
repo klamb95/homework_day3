@@ -8,11 +8,12 @@ users = [
 ]
 
 def find_user_by_id(list, id):
-    for user in list:
-        if user["user_id"] == id:
-            return user
+  found_user = None
+  for user in list:
+    if user["user_id"] == id:
+      found_user = user
+  return found_user
     
-    return "Not found"
 
 print(find_user_by_id(users, 1))
 print(find_user_by_id(users, 3))
