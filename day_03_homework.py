@@ -7,13 +7,13 @@ users = [
   { "user_id": 5, "first_name": "Brendan", "last_name": "Eich" },
 ]
 
-def find_person_by_name(list, person_name):
-    for person in list:
-        if person["first_name"] == person_name:
-            return person
+def find_user_by_id(list, id):
+    for user in list:
+        if user["user_id"] == id:
+            return user
     
     return "Not found"
 
-print(find_person_by_name(users, "Margaret"))
-print(find_person_by_name(users, "Bill"))
-print(find_person_by_name(users, "Kieran"))
+print(find_user_by_id(users, 1))
+print(find_user_by_id(users, 3))
+print(find_user_by_id(users, 6))
